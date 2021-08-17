@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
@@ -22,6 +23,23 @@
   </head>
   <body>
     <div class="container">
+      <form id="search-form">
+        <input
+          type="search"
+          class="search-bar"
+          placeholder=" Search City"
+          autocomplete="off"
+          id="search-city-input"
+        />
+        <input
+          class="submit-button"
+          id="search-button"
+          type="submit"
+          value="🔎"
+        />
+        <button class="button" id="locate-button">Locate Me 📍</button>
+      </form>
+
       <h1 id="current-city">New York</h1>
 
       <h2>4 June, Sunday 2021</h2>
@@ -36,10 +54,10 @@
         <span class="current-weather-temp" id="current-temp">
           23 <small class="temp-units"> °C | <a href="# ">°F </a> </small>
         </span>
-        <li class="description" id="current-description">Foggy</li>
-        <li id="current-humidity">Humidity: 70%</li>
-        <li id="current-wind-speed">Wind: 4 km/h</li>
-        <li id="current-percip">Percipitation: 0%</li>
+        <li class="description" id="current-temp-description">Foggy</li>
+        <li id="current-temp-humidity">Humidity: 70%</li>
+        <li id="current-temp-windspeed">Wind: 4 km/h</li>
+        <li id="current-temp-percip">Percipitation: 0%</li>
       </ul>
 
       <small>
