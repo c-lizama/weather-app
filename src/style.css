@@ -62,6 +62,15 @@ h3 {
   font-size: 14px;
   top: -18px;
 }
+.current-weather .active {
+  color: #41424d;
+  cursor: default;
+  text-decoration: none;
+}
+
+.current-weather .active:hover {
+  text-decoration: none;
+}
 
 small {
   font-size: 10px;

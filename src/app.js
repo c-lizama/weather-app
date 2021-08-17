@@ -64,7 +64,7 @@ function showTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
 
   let temp = document.querySelector("#current-temp");
-  temp.innerHTML = `${temperature}˚C`;
+  temp.innerHTML = `${temperature}`;
   let location = document.querySelector("#current-city");
   location.innerHTML = `${city}, ${place}`;
 
@@ -78,6 +78,8 @@ function showTemperature(response) {
   function changeToFahrenheit(event) {
     event.preventDefault();
     let currentTemperature = document.querySelector("#current-temp");
+    celsius.classList.remove("active");
+    fahrenheit.classList.add("active");
     let temperature = Math.round(response.data.main.temp);
     temperature = Number(temperature);
     currentTemperature.innerHTML = Math.round((temperature * 9) / 5 + 32);
@@ -86,6 +88,8 @@ function showTemperature(response) {
   function changeToCelsius(event) {
     event.preventDefault();
     let currentTemperature = document.querySelector("#current-temp");
+    celsius.classList.add("active");
+    fahrenheit.classList.remove("active");
     let temperature = Math.round(response.data.main.temp);
     temperature = Number(temperature);
     currentTemperature.innerHTML = Math.round(response.data.main.temp);
@@ -102,3 +106,4 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+search("paris");
