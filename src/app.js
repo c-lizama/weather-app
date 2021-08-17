@@ -28,6 +28,15 @@ let month = months[now.getMonth()];
 
 h2.innerHTML = ` ${day}, ${month} ${date} ${year} ${hours}:${minutes} `;
 
+function search(city) {
+  let apiKey = "b20edc16a863f8a69dbcafcfb6c32b14";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&${apiKey}&units=metric`;
+
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+}
+
+search("New York");
+
 function searchCity(event) {
   event.preventDefault();
   let apiKey = "b20edc16a863f8a69dbcafcfb6c32b14";
@@ -106,4 +115,3 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
-search("paris");
