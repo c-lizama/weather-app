@@ -75,6 +75,27 @@ function showTemperature(response) {
   let todaywind = document.querySelector("#current-temp-windspeed");
   todaywind.innerHTML = `Wind: ${wind}km/h`;
 
+  function changeToFahrenheit(event) {
+    event.preventDefault();
+    let currentTemperature = document.querySelector("#current-temp");
+    let temperature = Math.round(response.data.main.temp);
+    temperature = Number(temperature);
+    currentTemperature.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  }
+
+  function changeToCelsius(event) {
+    event.preventDefault();
+    let currentTemperature = document.querySelector("#current-temp");
+    let temperature = Math.round(response.data.main.temp);
+    temperature = Number(temperature);
+    currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  }
+
+  let fahrenheit = document.querySelector("#fahrenheit-link");
+  fahrenheit.addEventListener("click", changeToFahrenheit);
+  let celsius = document.querySelector("#celsius-link");
+  celsius.addEventListener("click", changeToCelsius);
+
   let icon = document.querySelector("#icon");
   icon.setAttribute(
     "src",
