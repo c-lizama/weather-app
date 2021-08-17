@@ -10,14 +10,14 @@ body {
   border-color: #b9bbbc;
 }
 .submit-button {
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
   border-width: thin;
   background-color: #edf4fa;
   border-color: #b9bbbc;
 }
 .button {
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
   border-width: thin;
   background-color: #edf4fa;
@@ -26,32 +26,32 @@ body {
 }
 h1 {
   text-align: left;
-  font-size: 32px;
+  font-size: 28px;
   color: #41424d;
 }
 h2 {
-  font-size: 20px;
+  font-size: 16px;
   font-style: italic;
   color: #b9bbbc;
 }
 h3 {
   text-align: center;
-  font-size: 150px;
 }
 .current-weather {
   list-style: none;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
   color: #6e6f75;
+  padding: 0;
 }
 .current-weather-temp {
   color: #3548ba;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 32px;
 }
 .description {
   text-transform: capitalize;
-  font-size: 28px;
+  font-size: 22px;
   color: #41424d;
 }
 
@@ -59,6 +59,6 @@ h3 {
   position: relative;
   color: #3548ba;
   font-weight: 200;
-  font-size: 16px;
+  font-size: 14px;
   top: -18px;
 }
