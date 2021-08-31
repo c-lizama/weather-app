@@ -75,7 +75,8 @@ h3 {
 small {
   font-size: 10px;
 }
-.row {
+
+.weather-forecast {
   background-color: #edf4fa;
   border-radius: 30px;
   margin-top: 3%;

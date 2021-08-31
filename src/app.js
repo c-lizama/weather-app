@@ -28,6 +28,34 @@ let month = months[now.getMonth()];
 
 h2.innerHTML = ` ${day}, ${month} ${date} ${year} ${hours}:${minutes} `;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class= "row" >`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `    
+         <div class="col-2">
+          
+            <span class="weather-day"> ${day} </span>
+            <br />
+            <span class="weather-icon">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt=""
+                width="72"
+              />
+            </span>
+            <br />
+            <span class="weather-temp"> 25°C </span>
+          </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(city) {
   let apiKey = "b20edc16a863f8a69dbcafcfb6c32b14";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&${apiKey}&units=metric`;
@@ -36,6 +64,7 @@ function search(city) {
 }
 
 search("New York");
+displayForecast();
 
 function searchCity(event) {
   event.preventDefault();
