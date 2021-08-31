@@ -75,3 +75,19 @@ h3 {
 small {
   font-size: 10px;
 }
+.row {
+  background-color: #edf4fa;
+  border-radius: 30px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+.weather-day {
+  font-size: 22px;
+  color: #41424d;
+}
+.weather-temp {
+  font-size: 22px;
+  color: #3548ba;
+}
